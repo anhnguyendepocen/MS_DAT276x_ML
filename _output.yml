@@ -1,0 +1,8 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">Principle of Machine Learning</a></li>
+    sharing: no
+    download: no

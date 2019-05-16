@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Principle of Machine Learning</title>
+  <meta name="description" content="This is my notes and solutions to lab on the course ‘DAT276x Principle of Machine Learning’" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Principle of Machine Learning" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is my notes and solutions to lab on the course ‘DAT276x Principle of Machine Learning’" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Principle of Machine Learning" />
+  
+  <meta name="twitter:description" content="This is my notes and solutions to lab on the course ‘DAT276x Principle of Machine Learning’" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="introduction-to-machine-learning.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Principle of Machine Learning</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this notebook</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-overview"><i class="fa fa-check"></i>Course Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lab-overview"><i class="fa fa-check"></i>Lab Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programming-languages-used-in-this-course"><i class="fa fa-check"></i>Programming Languages Used in this Course</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#platform-requirements"><i class="fa fa-check"></i>Platform Requirements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#installing-software-for-the-labs"><i class="fa fa-check"></i>Installing Software for the Labs</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html"><i class="fa fa-check"></i><b>1</b> Introduction to Machine Learning</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#high-level-data-science-process"><i class="fa fa-check"></i><b>1.1</b> High Level Data Science Process</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#overview-of-machine-learning-with-k-means-classifiers"><i class="fa fa-check"></i><b>1.2</b> Overview of Machine Learning with K-Means Classifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exploring-data.html"><a href="exploring-data.html"><i class="fa fa-check"></i><b>2</b> Exploring Data</a></li>
+<li class="chapter" data-level="3" data-path="cleaning-and-preparing-data.html"><a href="cleaning-and-preparing-data.html"><i class="fa fa-check"></i><b>3</b> Cleaning and Preparing Data</a></li>
+<li class="chapter" data-level="4" data-path="getting-started-with-supervised-learning.html"><a href="getting-started-with-supervised-learning.html"><i class="fa fa-check"></i><b>4</b> Getting Started with Supervised Learning</a></li>
+<li class="chapter" data-level="5" data-path="improving-model-performance.html"><a href="improving-model-performance.html"><i class="fa fa-check"></i><b>5</b> Improving Model Performance</a></li>
+<li class="chapter" data-level="6" data-path="machine-learning-algorithms.html"><a href="machine-learning-algorithms.html"><i class="fa fa-check"></i><b>6</b> Machine Learning Algorithms</a></li>
+<li class="chapter" data-level="7" data-path="unsupervised-learning.html"><a href="unsupervised-learning.html"><i class="fa fa-check"></i><b>7</b> Unsupervised Learning</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Principle of Machine Learning</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Principle of Machine Learning</h1>
+</div>
+<div id="about-this-notebook" class="section level1 unnumbered">
+<h1>About this notebook</h1>
+<p>This is my notes and solutions to lab on the course <a href="https://www.edx.org/course/principles-of-machine-learning-r-edition-2"><strong>DAT276x Principle of Machine Learning: R Edition</strong></a></p>
+<div id="course-overview" class="section level2 unnumbered">
+<h2>Course Overview</h2>
+<p><strong>1. Introduction to Machine Learning</strong></p>
+<ul>
+<li>High Level Data Science Process
+<ul>
+<li>High Level Process</li>
+</ul></li>
+<li>Overview of Machine Learning with K-Means Classifiers
+<ul>
+<li>Overview of Machine Learning with K-Means Classifiers</li>
+<li>Demo of K-Means Classification</li>
+</ul></li>
+</ul>
+<p><strong>2. Exploring Data</strong></p>
+<ul>
+<li>Exploratory Data Analysis for Regression
+<ul>
+<li>Data Exploration</li>
+<li>Data Visualization</li>
+<li>Visualizing Distributions</li>
+<li>Visualizing Data Relationships</li>
+<li>Visualizing Categorical Relationships</li>
+<li>Using Aesthetics to Visualize High Dimensions</li>
+<li>Visualizing High Dimensional Relationships</li>
+</ul></li>
+<li>Exploratory Data Analysis for Classification
+<ul>
+<li>Visualizing for Classification</li>
+<li>Frequency Tables</li>
+</ul></li>
+</ul>
+<p><strong>3. Cleaning and Preparing Data</strong></p>
+<ul>
+<li>Data Preparation and Cleaning
+<ul>
+<li>Data Preparation</li>
+<li>Duplicates</li>
+<li>Missing Values</li>
+<li>Errors and Outliers</li>
+<li>Scaling</li>
+<li>Splitting</li>
+<li>Summary</li>
+<li>Finding and Treating Missing Data</li>
+<li>Finding and Treating Duplicates</li>
+<li>Scaling Data</li>
+</ul></li>
+<li>Feature Engineering
+<ul>
+<li>Overview of Feature Engineering</li>
+<li>Transforming Features</li>
+<li>Interaction Terms</li>
+<li>Summary</li>
+<li>Feature Engineering</li>
+</ul></li>
+</ul>
+<p><strong>4. Getting Started with Supervised Learning</strong></p>
+<ul>
+<li>Regression
+<ul>
+<li>Introduction to Linear Regression</li>
+<li>Multiple Linear Regression</li>
+<li>Basics of ML with R</li>
+<li>Evaluating Regression Models</li>
+<li>Demo of Evaluating Regression</li>
+<li>Models with Categorical Variables</li>
+</ul></li>
+<li>Classification
+<ul>
+<li>Introduction to Classification</li>
+<li>Loss Function for Classification</li>
+<li>Statistical Learning Theory for Supervised Learning</li>
+<li>Logistic Regression</li>
+<li>Maximum Likelihood Perspective</li>
+<li>Evaluating Classifiers</li>
+<li>ROC Curves</li>
+<li>ROC Curve Algorithms</li>
+<li>Classification Models</li>
+<li>Demo of Classifier Evaluation</li>
+<li>Imbalanced Data</li>
+<li>Approaches for Addressing Imbalanced Data</li>
+</ul></li>
+</ul>
+<p><strong>5. Improving Model Performance</strong></p>
+<ul>
+<li>Principles of Model Improvement
+<ul>
+<li>Improving Models</li>
+<li>Regularization</li>
+<li>Performing Regularization</li>
+<li>Interpreting Features</li>
+<li>Features Selection</li>
+</ul></li>
+<li>Techniques for Improving Models
+<ul>
+<li>Sweeping Parameters</li>
+<li>Cross Validation</li>
+<li>Nested Cross Validation</li>
+<li>Model Selection and Cross Validation</li>
+</ul></li>
+<li>Dimensionality Reduction
+<ul>
+<li>Overview of Dimensionality Reduction</li>
+<li>Principal Component Analysis</li>
+</ul></li>
+</ul>
+<p><strong>6. Machine Learning Algorithms</strong></p>
+<ul>
+<li>Introduction to Decision Trees
+<ul>
+<li>Decision Trees</li>
+<li>What is Information</li>
+</ul></li>
+<li>Ensemble Methods
+<ul>
+<li>Boosting</li>
+<li>AdaBoost</li>
+<li>Coordinate Descent</li>
+<li>Decision Forests</li>
+</ul></li>
+<li>Neural Networks
+<ul>
+<li>Introduction to Neural Networks</li>
+<li>Backpropagation</li>
+</ul></li>
+<li>Support Vector Machines (SVMs)
+<ul>
+<li>Introduction to SVMs</li>
+<li>Kernels for SVMs</li>
+</ul></li>
+<li>Bayes Theorem
+<ul>
+<li>Theory of Naive Bayes Models</li>
+</ul></li>
+</ul>
+<p><strong>7. Unsupervised Learning</strong></p>
+<ul>
+<li>Clustering
+<ul>
+<li>Introduction to Clustering</li>
+<li>K-Means Clustering</li>
+<li>Hierachical Clustering</li>
+<li>Evaluating Clustering Models</li>
+</ul></li>
+</ul>
+<p><strong>8 Final Exam</strong></p>
+<ul>
+<li>Introduction</li>
+<li>About the Data</li>
+<li>Data Exploration</li>
+<li>Challenge 2: Classification</li>
+<li>Classification - Grading</li>
+<li>Challenge 3: Regression</li>
+<li>Regression Grading</li>
+</ul>
+<hr />
+</div>
+<div id="lab-overview" class="section level2 unnumbered">
+<h2>Lab Overview</h2>
+<p>This course includes labs that you can use to gain hands-on experience of building data science solutions. The labs are graded, and you will be required to answer questions after each lab to verify that you have completed them successfully.</p>
+<div id="programming-languages-used-in-this-course" class="section level3 unnumbered">
+<h3>Programming Languages Used in this Course</h3>
+<p>Many of the labs involve writing code in R. This course does not attempt to teach you exhaustive programming skills and syntax in these languages, so any experience you may already have in either language will be useful. However, the labs and demonstrations will provide you with the code you need to perform the data science operations described in this course, even if you have no prior experience, and there are references to resources that will help you work with these languages.</p>
+</div>
+<div id="platform-requirements" class="section level3 unnumbered">
+<h3>Platform Requirements</h3>
+<p>To execute the labs for this course you will need a computer meeting the following minimum requirements</p>
+<ul>
+<li>At least <code>10GB</code> of free disk space.</li>
+<li>At least <code>8 GB</code> of RAM.</li>
+<li>Running Windows, MAC OS X, or Linux.</li>
+</ul>
+</div>
+<div id="installing-software-for-the-labs" class="section level3 unnumbered">
+<h3>Installing Software for the Labs</h3>
+<p>If you do not already have an environment capable of running a Jupyter notebook with an R kernel, follow the steps below.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Anaconda stack</strong>: Installing Anaconda is one of the easiest ways to install Jupyter notebooks. Download the Python 3.X version for your operating system from the <a href="https://www.anaconda.com/download/">Anaconda download page</a>.</li>
+<li><strong>R</strong>: Download and install the latest version of R from the <a href="https://cran.r-project.org/">Comprehensive R Archive Network</a></li>
+<li><strong>Jupyter R Kernel</strong>: In order to run R in Jupyter you must download the <a href="https://irkernel.github.io/installation/">Jupyter IRkernel</a>. Follow the directions carefully. You can run a simple R session required for this installation by starting R and using the console. If this is the <strong>first time you have installed R</strong> you will need to run the command options(repos = “<a href="https://CRAN.R-project.org" class="uri">https://CRAN.R-project.org</a>”) before you can install R packages, including the IRKernel. Important note for MAC users Note the warning that you must run the commands in step 2 in a command console, not from R</li>
+<li><strong>Lab Materials From the Course Repository</strong>: You can download the Zip file with the course lab materials from <a href="https://github.com/MicrosoftLearning/Principles-of-Machine-Learning-R">the course Github repository</a>. Click on the Clone or download tab, and selected Download Zip. If you have Git installed, you can clone this repository.</li>
+<li><strong>Install R packages</strong>: You can install the R packages you will require for the labs by executing the code in the <strong>Setup</strong> notebook.
+Note: If you experience continual Jupyter kernel restarts, you may need to reinstall the R Rcpp package by executing the install.packages(“Rcpp”) command from the R console</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introduction-to-machine-learning.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
