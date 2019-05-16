@@ -73,12 +73,13 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html"><i class="fa fa-check"></i><b>1</b> Introduction to Machine Learning</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#high-level-data-science-process"><i class="fa fa-check"></i><b>1.1</b> High Level Data Science Process</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#overview"><i class="fa fa-check"></i><b>1.1.1</b> Overview</a></li>
-<li class="chapter" data-level="1.1.2" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#historical-note"><i class="fa fa-check"></i><b>1.1.2</b> Historical Note</a></li>
-<li class="chapter" data-level="1.1.3" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#example-of-the-knowledge-discovery-process"><i class="fa fa-check"></i><b>1.1.3</b> Example of the knowledge discovery process</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#high-level-data-science-process"><i class="fa fa-check"></i>High Level Data Science Process</a><ul>
+<li class="chapter" data-level="" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#historical-note"><i class="fa fa-check"></i>Historical Note</a></li>
+<li class="chapter" data-level="1.0.1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#example-of-the-knowledge-discovery-process"><i class="fa fa-check"></i><b>1.0.1</b> Example of the knowledge discovery process</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#summary"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#overview-of-machine-learning-with-k-means-classifiers"><i class="fa fa-check"></i><b>1.2</b> Overview of Machine Learning with K-Means Classifiers</a></li>
+<li class="chapter" data-level="1.1" data-path="introduction-to-machine-learning.html"><a href="introduction-to-machine-learning.html#overview-of-machine-learning-with-k-means-classifiers"><i class="fa fa-check"></i><b>1.1</b> Overview of Machine Learning with K-Means Classifiers</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="exploring-data.html"><a href="exploring-data.html"><i class="fa fa-check"></i><b>2</b> Exploring Data</a></li>
 <li class="chapter" data-level="3" data-path="cleaning-and-preparing-data.html"><a href="cleaning-and-preparing-data.html"><i class="fa fa-check"></i><b>3</b> Cleaning and Preparing Data</a></li>
@@ -105,17 +106,17 @@
             <section class="normal" id="section-">
 <div id="introduction-to-machine-learning" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction to Machine Learning</h1>
-<div id="high-level-data-science-process" class="section level2">
-<h2><span class="header-section-number">1.1</span> High Level Data Science Process</h2>
-<div id="overview" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Overview</h3>
+<div id="high-level-data-science-process" class="section level2 unnumbered">
+<h2>High Level Data Science Process</h2>
+<div id="overview" class="section level3 unnumbered">
+<h3>Overview</h3>
 <ul>
 <li>Historical Notes on <strong>KDD</strong>, <strong>CRISP-DM</strong>, <strong>Big Data</strong> and <strong>Data Science</strong> and their relationship to Data Mining and Machine Learning</li>
 <li>Example of the knowledge discovery process</li>
 </ul>
 </div>
-<div id="historical-note" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Historical Note</h3>
+<div id="historical-note" class="section level3 unnumbered">
+<h3>Historical Note</h3>
 <ul>
 <li>Term <strong>“Big Data”</strong> coined by astronomers Cox and Ellsworth in 1997</li>
 </ul>
@@ -139,7 +140,7 @@ Figure 1.1: Based on content in From Data Mining to Knowledge Discovery
 </ul>
 </div>
 <div id="example-of-the-knowledge-discovery-process" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Example of the knowledge discovery process</h3>
+<h3><span class="header-section-number">1.0.1</span> Example of the knowledge discovery process</h3>
 <p>I’ll walk you through the knowledge discovery process with an example - the process of predicting power failures in Manhattan.</p>
 <p><strong>Motivation for Example</strong></p>
 <ul>
@@ -167,11 +168,84 @@ How will you evaluate the quality of the results?</p>
 <li>Goal 1: Assess predictive accuracy for predicting manhole events in the uear before they happen.</li>
 <li>Goal 2: Create a cost-benefit analysis for inspection policies that takes into account the cost of inspections and manhole fires. Determine how often manholes need to be inspected.</li>
 </ul>
+<p><strong>Data Understanding &amp; Data Acquisition</strong></p>
+<p>Data were:</p>
+<ul>
+<li>Trouble tickets - free text documents typed by dispatchers documenting problems on the electrical grid.</li>
+<li>Records of information about manholes</li>
+<li>Records of information about underground cables</li>
+<li>Electrical shock information tables</li>
+<li>Extra information about serious events</li>
+<li>Inspection reports</li>
+<li>Vented cover data</li>
+</ul>
+<p><strong>Data Preparation, including Cleaning and Transformation</strong></p>
+<p>Sometimes 99% of the work.</p>
+<p>Turn free text into sturctured information:</p>
+<ul>
+<li>Trouble tickets turned into a vector like:
+<ul>
+<li>Serious / Less Serious / Not an Event</li>
+<li>Year</li>
+<li>Month</li>
+<li>Day</li>
+<li>Manholes involved</li>
+<li>…</li>
+</ul></li>
+<li>Try to integrate tables (create unique identifiers):
+<ul>
+<li>If you join manholes to cables, half of the cable records disappear</li>
+</ul></li>
+</ul>
+<p><strong>Model Building</strong></p>
+<p>Often predictive modeling, meaning machine learning or statistical modeling.</p>
+<ul>
+<li>If you want to answer a yes/no question, this is classificaiton.
+<ul>
+<li>For manholes, will the manhole explode nect year? Y/N.</li>
+</ul></li>
+<li>If you want to predict a numerical value, this is regression.</li>
+<li>If you want to group observations into similar-looking groups, this is clustering.</li>
+<li>If you want to recommend someone an item (e.g. book/ movie/ product) based on ratings data from customers, this is a recommender system.</li>
+<li>Note: There are many other machine learning problems.</li>
+</ul>
+<p><strong>Policy Construction</strong></p>
+<p>How will your model be used to change policy?</p>
+<ul>
+<li>For manholes, how should we recommend changing the inspection policy based on our model?</li>
+<li>Consider using social media and customer purchase data to determine customer participation if Starbucks moves into New City. After the model is created, how to optimize where the shops are located, how big they are, and where the warehouses are located.</li>
+<li>Model building is predictive, Policy Construction is prescriptive.</li>
+</ul>
+<p><strong>Evaluation</strong></p>
+<ul>
+<li>How do you measure the quality of the result? Evaluation can be difficult if the data do not provide ground truth.</li>
+<li>For manhole events, we had engineers at Con Edison withhold high quality recent data and conduct a blind test.</li>
+</ul>
+<p><strong>Deployment</strong></p>
+<ul>
+<li>Getting a working proof of concept deployed stops 95% percent of projects.</li>
+<li>Don’t bother doing the project in the first place if no one plans to deploy it. ( Unless it’s fun.)</li>
+<li>Keep a realistic timeline in mind. Then add several months.</li>
+<li>While the model is deployed it will need to be updated and improved.</li>
+</ul>
+</div>
+<div id="summary" class="section level3 unnumbered">
+<h3>Summary</h3>
+<ul>
+<li>Several attempts to make the process of discovering knowledge scientific
+<ul>
+<li>KDD, CRISP-DM, CCC Big Data Pipeline</li>
+</ul></li>
+<li>All have very similar steps
+<ul>
+<li>Data Mining is only one of those steps (but an important one)</li>
+</ul></li>
+</ul>
 <hr />
 </div>
 </div>
 <div id="overview-of-machine-learning-with-k-means-classifiers" class="section level2">
-<h2><span class="header-section-number">1.2</span> Overview of Machine Learning with K-Means Classifiers</h2>
+<h2><span class="header-section-number">1.1</span> Overview of Machine Learning with K-Means Classifiers</h2>
 
 </div>
 </div>
